@@ -1,0 +1,11 @@
+<section class="liquors">
+	<button class="add-liquor">{{fa-icon "plus" size=2}}</button>
+
+	<dl class="liquor-list">
+	    {{#each model as |liquor|}}
+			  <dt>{{#link-to "liquors.liquor" liquor}}{{liquor.name}}{{/link-to}}</dt>
+			  <dd>{{liquor.brand}}</dd>
+	    {{/each}}
+	</dl>
+</section>
+{{outlet}}

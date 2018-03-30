@@ -1,0 +1,92 @@
+body{
+	background-color: #333;
+	color: #77EDF4;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	background-color: #77EDF4;
+	padding: 0.25rem;
+	margin:	1rem;
+	a{
+		background-color: #333;
+		text-decoration: none;
+		color:	#77EDF4;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		border: 0.05rem solid #333;
+		&:hover {
+			background-color: #77EDF4;
+			color: #333;
+			border: 0.05rem solid #333;
+		}
+	}
+}
+
+
+.liquors {
+	border: 0.25rem solid #77EDF4;
+	padding: 2rem;
+	margin:	1rem;
+	.add-liquor {
+		margin: 1rem;
+		background-color: #77EDF4;
+		border-radius: 0.25rem;
+		cursor: pointer;
+		i {
+			color: #333;
+		}
+	}
+
+	.liquor-list {
+		list-style: none;
+		margin: 1rem;
+		padding: 1rem;
+		dt {
+			padding: 1rem;
+		}
+		dd {
+			border-bottom: 0.05rem solid #77EDF4;
+			padding: 0.75rem;
+		}
+	}
+
+	a {
+		color: #77EDF4;
+		// text-decoration: none;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		&:hover {
+			background-color: #77EDF4;
+			color: #333;
+			border: 0.05rem solid #333;
+		}
+	}
+}
+
+.liquor{
+	padding: 2rem;
+	.comments {
+		margin: 2rem;
+		margin-bottom: 0;
+		padding: 2.5rem;
+		padding-top: 0;
+
+		.submit-comment{
+			background-color: #77EDF4;
+			border-radius: 0.5rem;
+		}
+	}
+
+	.liquor-detail{
+		padding: 2.5rem;
+		padding-top: 0;
+	}
+
+	fieldset{
+		margin-top: 2.5rem;
+		border: 0.05rem solid #77EDF4;
+		padding: 1.5rem;
+	}
+}

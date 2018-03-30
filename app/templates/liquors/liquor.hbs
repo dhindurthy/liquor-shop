@@ -1,0 +1,22 @@
+<section class="liquor">
+	<section class="liquor-detail">
+		<h3>{{model.name}}</h3>
+		{{model.brand}}
+	</section>
+	<section class="comments">
+		{{#each model.comments as |comment|}}
+			<p class="comment">{{comment.message}}</p>
+		{{/each}}
+
+		<fieldset>
+			<legend>Post Comments</legend>
+				<form>
+					{{input type="text" value=message}}
+					<input class="submit-comment" type="submit" value="Comment" {{action "submitComment" model.id}}>
+				</form>
+		</fieldset>
+	</section>
+</section>
+
+
+{{outlet}}
