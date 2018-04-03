@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('liquors', function() {
     this.route('liquor', { path: '/:liquor_id' });
+    this.route('add-liquor');
   });
 });
 

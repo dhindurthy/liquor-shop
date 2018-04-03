@@ -6,9 +6,9 @@ export default Ember.Controller.extend({
 		submitComment: function(id){
 			var message = this.get('message');
 			let liquor =this.get('store').peekRecord('liquor', id);
-			var random = Math.random().toString(36).substr(2, 9);
+			var id_new = Math.random().toString(36).substr(2, 9);
 			let comment = this.get('store').createRecord('comment', {
-				"id": random,
+				"id": id_new,
 				"message": message
 			});
 			liquor.get('comments').pushObject(comment);

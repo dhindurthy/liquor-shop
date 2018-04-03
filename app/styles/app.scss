@@ -1,19 +1,81 @@
-body{
+body {
+	margin:0 auto;
+	font-family:"Indie Flower","Comic Sans MS", cursive, sans-serif;
 	background-color: #333;
 	color: #77EDF4;
 }
 
+.container {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+/**grid specific styles begin**/
+.item-a {
+  	grid-area: logo;
+	background-color: #77EDF4;
+	padding: 0.5rem;
+}
+.item-b {
+  	grid-area: header;
+  	background-color: #77EDF4;
+  	padding: 0.5rem;
+}
+
+.item-d {
+  	grid-area: main;
+  	padding: 1rem;
+}
+.item-e {
+  	grid-area: recents;
+	background-color: #77EDF4;
+	color: #333;
+	padding: 0.5rem;
+}
+.item-f {
+  	grid-area: footer;
+	background-color: #77EDF4;
+	color: #333;
+	padding: 0.15rem;
+}
+.grid-container {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template-columns: 5% 70% 15%; 
+	grid-template-rows: 15% 35% 35% 5%;
+	grid-template-areas: 
+		"logo header header"
+		"main main recents"
+		"main main recents"
+		"footer footer footer";
+	grid-column-gap: 0.25rem;
+	grid-row-gap: 2.5rem;
+	
+	justify-items: stretch;//center ;//start;//end;
+	align-items: stretch;//space-evenly;//start;//end;////center;
+	justify-content: space-evenly;//space-between;//space-around;//stretch;//center; //for horizontal
+	align-content: space-between;//start; //for vertical
+	
+	//for implicitly created rows/columns
+	grid-auto-columns: 3rem;
+	grid-auto-rows: 3rem;
+	
+	//notice how the 'random' items are placed when this changes to row/column
+	grid-auto-flow:column;//row
+}
+
 nav {
 	display: flex;
-	justify-content: space-around;
-	background-color: #77EDF4;
-	padding: 0.25rem;
-	margin:	1rem;
+	justify-content: space-evenly;
 	a{
+		padding:0.5rem;
 		background-color: #333;
 		text-decoration: none;
 		color:	#77EDF4;
-		padding: 0.5rem;
 		border-radius: 0.5rem;
 		border: 0.05rem solid #333;
 		&:hover {
@@ -26,37 +88,45 @@ nav {
 
 
 .liquors {
-	border: 0.25rem solid #77EDF4;
-	padding: 2rem;
-	margin:	1rem;
+	display: flex;
+	flex-direction: column;
+	justify-items: flex-start;
 	.add-liquor {
-		margin: 1rem;
 		background-color: #77EDF4;
 		border-radius: 0.25rem;
 		cursor: pointer;
+		width:4rem;
 		i {
 			color: #333;
+		}
+		&:hover {
+			background-color: #333;
+			color: #77EDF4;
+			i {
+				color: #77EDF4;
+			}
 		}
 	}
 
 	.liquor-list {
 		list-style: none;
-		margin: 1rem;
-		padding: 1rem;
+		padding:1rem;
 		dt {
-			padding: 1rem;
+			margin-top: 1rem;
+			padding: 0.25rem;
 		}
 		dd {
+			padding: 0.25rem;
 			border-bottom: 0.05rem solid #77EDF4;
-			padding: 0.75rem;
+			margin-bottom: 1rem;
 		}
 	}
 
 	a {
 		color: #77EDF4;
-		// text-decoration: none;
-		padding: 0.5rem;
 		border-radius: 0.5rem;
+		padding:0.25rem;
+		text-decoration: none;
 		&:hover {
 			background-color: #77EDF4;
 			color: #333;
@@ -66,27 +136,61 @@ nav {
 }
 
 .liquor{
-	padding: 2rem;
-	.comments {
-		margin: 2rem;
-		margin-bottom: 0;
-		padding: 2.5rem;
-		padding-top: 0;
+	.liquor-detail{
+		padding: 1rem;
+		.liquor-list {
+			list-style: none;
+			dt {
+			}
+			dd {
+			}
+		}
 
-		.submit-comment{
-			background-color: #77EDF4;
-			border-radius: 0.5rem;
+		.fa-tags {
+
 		}
 	}
 
-	.liquor-detail{
-		padding: 2.5rem;
-		padding-top: 0;
+	.comments {
+		padding: 1rem;
+		padding-left: 2rem;
+		font-size: 0.75rem;
+		.submit-comment{
+			background-color: #77EDF4;
+			display: block;
+		}
 	}
 
 	fieldset{
-		margin-top: 2.5rem;
 		border: 0.05rem solid #77EDF4;
-		padding: 1.5rem;
+		padding: 1.25rem;
+	}
+}
+
+.add-liquor {
+	i{
+		font-size: 1rem;
+	}
+	fieldset{
+		border: 0.05rem solid #77EDF4;
+		padding: 1.25rem;
+		width:90%;
+	}
+
+	.add-brand{
+		display: block;
+		margin: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.add-name{
+		display: block;
+		margin: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.submit-liquor{
+		background-color: #77EDF4;
+		display: block;
 	}
 }

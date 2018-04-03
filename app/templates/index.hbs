@@ -1,11 +1,11 @@
-<section class="liquors">
-	<button class="add-liquor">{{fa-icon "plus" size=2}}</button>
+<section class="liquors item item-d">
+	<button class="add-liquor" {{action "gotoAdd"}}>{{fa-icon "plus" size=2}}</button>
 
 	<dl class="liquor-list">
 	    {{#each model as |liquor|}}
-			  <dt>{{#link-to "liquors.liquor" liquor}}{{liquor.name}}{{/link-to}}</dt>
+			  <dt tabindex="0">{{#link-to "liquors.liquor" liquor}}{{liquor.name}}{{/link-to}}</dt>
 			  <dd>{{liquor.brand}}</dd>
 	    {{/each}}
 	</dl>
+	{{outlet}}
 </section>
-{{outlet}}

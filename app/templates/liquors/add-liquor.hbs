@@ -1,0 +1,15 @@
+{{outlet}}
+<section class="add-liquor item item-d">
+	<fieldset>
+		<legend>{{fa-icon "plus" size=2}} {{fa-icon "plus" size=2}} {{fa-icon "plus" size=2}}</legend>
+			<form>
+				<label for="liquor-name">Name</label>
+				{{input class="add-name" id="liquor-name" type="text" value=liquorName}}
+
+				<label for="liquor-brand">Brand</label>
+				{{input class="add-brand" id="liquor-brand" type="text" value=liquorBrand}}
+
+				<input class="submit-liquor" type="submit" value="Save" {{action "addLiquor"}}>
+			</form>
+	</fieldset>
+</section>

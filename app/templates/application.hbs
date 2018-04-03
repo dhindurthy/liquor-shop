@@ -1,5 +1,18 @@
-<nav>
-	{{#link-to "index"}}LIQUORS{{/link-to}}
-	{{#link-to "index"}}TAGS{{/link-to}}
-</nav>
-{{outlet}}
+<section class="grid-container">
+	<section class="item item-a"></section>
+	<section class="item item-b">
+		<nav>
+			{{#link-to "index"}}LIQUORS{{/link-to}}
+			{{#link-to "index"}}TAGS{{/link-to}}
+		</nav>
+	</section>
+	{{outlet}}
+	<section class="item item-e">
+		<p>Recents......</p>
+	</section>
+	
+	<section class="item item-f">
+		<span>Footer</span>
+	</section>
+</section>
+

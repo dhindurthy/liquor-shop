@@ -1,17 +1,20 @@
-<section class="liquor">
+<section class="liquor item item-d">
 	<section class="liquor-detail">
-		<h3>{{model.name}}</h3>
-		{{model.brand}}
+		<dl class="liquor-list">
+			<dt tabindex="0">{{model.name}}</dt>
+			<dd>{{model.brand}}</dd>
+		</dl>
+		<i class="fa fa-tags fa-1x" aria-hidden="true"></i>
 	</section>
 	<section class="comments">
 		{{#each model.comments as |comment|}}
-			<p class="comment">{{comment.message}}</p>
+			<p class="comment" tabindex="0">{{fa-icon "comment" size=1}} {{comment.message}}</p>
 		{{/each}}
 
 		<fieldset>
 			<legend>Post Comments</legend>
 				<form>
-					{{input type="text" value=message}}
+					{{textarea  value=message rows="4" cols="50"}}
 					<input class="submit-comment" type="submit" value="Comment" {{action "submitComment" model.id}}>
 				</form>
 		</fieldset>
