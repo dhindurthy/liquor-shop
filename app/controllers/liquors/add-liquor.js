@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
 			var liquorName = this.get('liquorName');
 			var liquorBrand = this.get('liquorBrand');
 
-			var id = Math.random().toString(36).substr(2, 9);
+			var id = Math.random().toString(30).substr(2, 7);
 			let liquor = this.get('store').createRecord('liquor', {
 				"id": id,
 				"name": liquorName,
