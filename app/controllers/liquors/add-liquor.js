@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 	actions:{
 		addLiquor: function(){
-			debugger;
 			var liquorName = this.get('liquorName');
 			var liquorBrand = this.get('liquorBrand');
 
