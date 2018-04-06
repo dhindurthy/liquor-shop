@@ -7,8 +7,12 @@
 		<i class="fa fa-tags fa-1x" aria-hidden="true"></i>
 	</section>
 	<section class="comments">
+		{{fa-icon "comment" size=3}}
 		{{#each model.comments as |comment|}}
-			<p class="comment" tabindex="0">{{fa-icon "comment" size=1}} {{comment.message}}</p>
+			<section class="comment" tabindex="0">
+				<p>{{comment.message}}</p>
+				<button class="remove-comment" {{action "removeComment" comment.id}} tabindex="0">{{fa-icon "times" }}</button>
+			</section>
 		{{/each}}
 
 		<fieldset>
