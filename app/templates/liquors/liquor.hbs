@@ -4,14 +4,28 @@
 			<dt tabindex="0">{{model.name}}</dt>
 			<dd>{{model.brand}}</dd>
 		</dl>
-		<i class="fa fa-tags fa-1x" aria-hidden="true"></i>
+		<section class="tags">
+			<button class="add-tag" {{action "toggleModal" }} aria-label="Add Tag" tabindex="0"><i class="fa fa-tags fa-2x" aria-hidden="true"></i></button>
+			<ul class="tag-list">
+				{{#each model.tags as |tag|}}
+			    	<li>{{ls-tag name=tag.name tagId=tag.id removeTag="removeTag"}}</li>
+			  	{{/each}}
+			</ul>
+		</section>
+		{{#if isModalVisible}}
+		    {{#ls-modal}}
+		      <h3 tabindex="0">Add your Tag</h3>
+		      {{input type="text" value=tagName class="tag-input"}}
+		      <button tabindex="0"{{action "addTag" model.id}}>Add</button><button {{action 'closeModal'}}>Close</button>
+		    {{/ls-modal}}
+	  {{/if}}
 	</section>
 	<section class="comments">
 		{{fa-icon "comment" size=3}}
 		{{#each model.comments as |comment|}}
 			<section class="comment" tabindex="0">
 				<p>{{comment.message}}</p>
-				<button class="remove-comment" {{action "removeComment" comment.id}} tabindex="0">{{fa-icon "times" }}</button>
+				<button class="remove-comment" {{action "removeComment" comment.id}} tabindex="0">{{fa-icon "times" size="lg"}}</button>
 			</section>
 		{{/each}}
 

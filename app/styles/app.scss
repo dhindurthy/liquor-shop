@@ -136,6 +136,7 @@ nav {
 }
 
 .liquor{
+	
 	.liquor-detail{
 		padding: 1rem;
 		.liquor-list {
@@ -148,6 +149,16 @@ nav {
 
 		.fa-tags {
 
+		}
+		.add-tag{
+			color: #333;
+			padding: 0;
+			background-color: #333;
+			border: transparent;;
+			i{
+				margin: 0;
+				color: #77EDF4;
+			}
 		}
 	}
 
@@ -212,3 +223,47 @@ nav {
 		display: block;
 	}
 }
+
+.ls-modal{
+	border: 0.25rem solid #E35B44;
+	padding:1rem;
+	margin:0.5rem;
+	width:35rem;
+	position: absolute;
+	z-index: 1;
+	background-color:white;
+	color: #333;
+	button {
+		background-color: #77EDF4;
+		color: #333;
+		margin: 0.5rem;
+	}
+
+	.tag-input{
+		display:block;
+		margin: 0.5rem;
+	}
+}
+.tags{
+	display: flex;
+	.fa-tags {
+	  padding:5px;
+	  margin:5px;
+	}
+	.tag-list {
+		display:flex;
+	  list-style:none;
+	  margin: 0;
+	}
+}
+.ls-tag {
+	padding:5px;
+  background-color:#77ED;
+  margin:5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  .close-tag{
+  	color: #333;
+  }
+}
+
