@@ -11,6 +11,12 @@ export default Ember.Component.extend({
     	this.sendAction('removeTag', this.get('tagId'));
     },
 
+    keyDown: function(event){
+		if(event.keyCode===13 ){
+			this.sendAction('removeTag', this.get('tagId'));
+	    }
+	},
+
   actions:{
   	
   }

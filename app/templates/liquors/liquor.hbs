@@ -15,7 +15,9 @@
 		{{#if isModalVisible}}
 		    {{#ls-modal}}
 		      <h3 tabindex="0">Add your Tag</h3>
-		      {{input type="text" value=tagName class="tag-input"}}
+		      {{ls-datalist datalist=datalist on-change="onChange" label="Add existing tag"}}
+		      <label class="tag-input" for="create-tag">Create new tag</label>
+		      {{input id="create-tag" type="text" value=tagName class="tag-input"}}
 		      <button tabindex="0"{{action "addTag" model.id}}>Add</button><button {{action 'closeModal'}}>Close</button>
 		    {{/ls-modal}}
 	  {{/if}}

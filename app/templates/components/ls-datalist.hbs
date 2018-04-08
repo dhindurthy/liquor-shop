@@ -1,0 +1,8 @@
+{{yield}}
+<label for="list-input">{{label}}</label><br>
+<input id="list-input" list="itemList">
+<datalist id="itemList" >
+	{{#each datalist as |option|}}
+	  	<option class="option" value={{option.name}}></option>
+	{{/each}}
+</datalist>
