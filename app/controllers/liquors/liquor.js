@@ -1,12 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	// datalist: Ember.computed(function(){
-	// 	return 
-	// }),
-	didInsertElement(){
-		
-	},
+	
 	actions:{
 
 		submitComment: function(id){
