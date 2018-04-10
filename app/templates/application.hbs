@@ -7,8 +7,24 @@
 		</nav>
 	</section>
 	{{outlet}}
-	<section class="item item-e">
-		<p>Recents......</p>
+	<section class="item item-e recents">
+		<section class="recent-liquors">
+			<h4>Liquors</h4>
+			<ul class="recent-liquor-list">
+				{{#each model.liquors as |liquor|}}
+					<li>{{liquor.name}}</li>
+				{{/each}}
+			</ul>
+		</section>
+		<section>
+			<h4>Tags</h4>
+			<ul class="recent-tag-list">
+				{{#each model.tags as |tag|}}
+					<li>{{ls-tag name=tag.name tagId=tag.id }}</li>
+				{{/each}}
+			</ul>
+		</section>
+		
 	</section>
 	
 	<section class="item item-f">
