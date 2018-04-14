@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('liquor', { path: '/:liquor_id' });
     this.route('add-liquor');
   });
+  this.route('tags');
 });
 
 export default Router;
