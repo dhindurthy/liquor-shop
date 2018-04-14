@@ -308,4 +308,18 @@ nav {
 	margin-bottom: 2rem;
 }
 
+.tags {
+	ul {
+		list-style:none;
+	}
+	li {
+		margin: 0.25rem;
+		.fa-tag{
+			margin-right: 0.5rem;
+		}
+	}
+	.tag-liquor-list{
+		display: flex;
+	}
+}
 
