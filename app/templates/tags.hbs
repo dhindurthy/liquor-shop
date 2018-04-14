@@ -1,1 +1,13 @@
-{{outlet}}
+<section class="tags item item-d">
+	<ul class="tag-template-list">
+		{{#each model as |tag|}}
+			<li><i class="fa fa-tag" aria-hidden="true"></i>{{tag.name}}</li>
+			{{model.liquors}}
+			<ul  class="tag-liquor-list">
+				{{#each tag.liquors as |liquor|}}
+					<li>{{liquor.name}}</li> .
+				{{/each}}
+			</ul>
+		{{/each}}
+	</ul>
+</section>
