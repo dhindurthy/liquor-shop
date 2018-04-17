@@ -5,6 +5,7 @@ export default Ember.Route.extend({
 	//     this.replaceWith('liquors');
 	// }
 	model: function(){
-		return this.get('store').findAll('liquor',{include:'comments'});
+		return this.get('store').findAll('liquor',{include:'comments'}); 
+		/**Or just findAll('liquor') will get all relationships too**/
 	}
 });
