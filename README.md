@@ -40,7 +40,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 ### Deploying
 
 Specify what it takes to deploy your app.
-https://5cfa8dc41e8ef3b2a7aabc5e--dhirajindurthy-ember.netlify.com/
+https://dhindurthy-liquorshop.netlify.com/
 
 ## Further Reading / Useful Links
 
